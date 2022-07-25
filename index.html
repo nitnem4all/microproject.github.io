@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Indira Gandhi Jr College</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .slideshow img{ 
+            width: 100%;
+            height: 500px;
+        }
+        .header{
+            background-color: #002147;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: whitesmoke;
+            height: 100px;
+            width: 100%;
+        }
+        .header h1{
+            font-weight: 400;
+            font-size: 45px;
+            margin: 0;
+            padding-top: 20px;
+        }
+        .header #logo{
+            float: left;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            margin-right: 70px;
+        }
+        .navbar{
+          overflow: hidden;
+          background-color:rgb(245, 242, 230);
+          display: flex;
+          justify-content: center;
+        }
+
+        .navbar a {
+          float: left;
+          font-size: 22px;
+          font-weight: 500;
+          color: darkblue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .navbar a:not(.active):hover{
+            background-color:powderblue ;
+        }
+        .active{
+            background-color: lightskyblue;
+            color:darkblue   !important;
+        }
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropbtn {
+          font-size: 22px;  
+          font-weight: 500;
+          border: none;
+          outline: none;
+          color: darkblue;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #ddd !important;
+          border: none !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .footer{
+            background-color: #002147;
+            color: whitesmoke;
+            padding-left: 330px;
+            height:max-content;
+            font-size: 25px;
+        }
+        .footer i{
+            color: white;
+            border: 2px solid #2b5788;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            padding-top: 9px;
+            margin-bottom: 16px;
+        }
+        .footer i:hover{
+            background-color:gold;
+            color: #002147;
+            border: 2px solid gold;
+        }
+        marquee{
+            background-color: #002147;
+            color:wheat;
+            padding: 5px;
+            margin:0 100px;
+        }
+        .scroll{
+            background-color: #002147;
+        }
+        .welcome{
+            width: 100%;
+            background-color: white;
+            color: rgb(0, 0, 83);
+            text-align: center;
+        }
+        .welcome h1{
+            font-size: 45px;
+            font-weight: 400;
+        }
+        .vismismot{
+            width: 100%;
+            background-color:white;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+        }
+        .vismismot .card{
+            padding: 30px;
+            text-align: center;
+            margin: 30px;
+            height: auto;
+            width: 600px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .vismismot #circle{
+            background-color: #eeeeee;
+            cursor: pointer;
+            color: #002147;
+            text-align: center;
+            padding-top: 25px;
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            font-size: 40px;
+        }
+        .vismismot #circle:hover{
+            background-color: gold;
+            color: #002147;
+        }
+        .vismismot h3{
+            text-transform:uppercase;
+            font-weight: 600;
+        }
+        .vismismot h3:hover{
+            color: gold;
+        }
+        .streams{
+            background-image: url(libraryback.jpg);
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 60px;
+            padding-top: 50px;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .streamcard{
+            height: auto;
+            width: 320px;
+            margin: 30px;
+        }
+        .streamcard:hover{
+            transform: translate(-20px,-20px);
+            transition: all ease-in-out 0.5s;
+        }
+        .streamcard .text{
+            background-color: white;
+            padding: 20px;
+            margin-top: 0;
+        }
+        .streamcard .text h5:hover{
+            color: gold;
+        }
+        .streams a{
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .streams a font{ 
+            border: 2px solid gold;
+            padding: 16px;
+            font-weight: 800;
+        }
+        .streams a font:hover{
+            background-color: gold;
+            color: #002147;
+        }
+        .important{
+            background-color: #eeeeee;  
+            padding: 30px 70px;
+            display: flex;
+            flex-direction: column;
+        }
+        .important h1{
+            margin-bottom: 40px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+        } 
+        .row .icards{
+            background-color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            height: 170px;
+            width: 600px;
+            margin: 30px;
+        }
+        .icards h3 , p , code{
+            padding-left: 10px;
+        }
+        .icards img:hover{
+            transform: translate(350px);
+            transition: all 1s ease-in;
+        }
+        .icards a{
+            color: #002147;
+            text-decoration: none;
+        }
+        .icards a:hover{
+            color:gold
+        }
+        .facilities{
+            text-align: center;
+            padding: 10px 0 70px 0;
+            background-color: rgba(158, 29, 29, 1);
+        }
+        .facilities h1{
+            text-transform: uppercase;
+            margin-bottom: 50px !important;
+            color: white;
+            font-size: 45px;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+        .fcard{
+            width: 100px;
+            margin: 50px;
+            color: white;
+        }
+        .fcard h2{
+            font-size: 20px !important;
+            margin-top: 20px;
+            text-align: center;
+            padding: 0 !important;
+        }
+        .fcard img{
+            width: 80px;
+        }
+        .facilities a{
+            text-decoration:none;
+            font-size: 25px;
+            padding: 10px;
+            background-color: red;
+            color: wheat;
+            text-align: center;
+            opacity: 0.7;
+        }
+        .facilities a:hover{
+            color: white;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="logo.png" alt="" height="100px" width="120px" id="logo">
+    <h1>Indira Gandhi College Of Arts,Commerce & Science</h1>
+</div>
+
+<div class="scroll">
+    <marquee>
+    Indira Gandhi Junior College of Arts, Commerce and Science welcomes all Students and Parents for 2021! A new entity from the IGJC Education Society, our infrastructure, teaching staff, facilities and extra-curricular activities are all among the best in Solapur city.
+    We are born out of the noble visions of its promoters for creating a new generation with high degree of basic values. .
+    </marquee>
+</div>
+   
+<div class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">About Us 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="introduction.html">Intoduction</a>
+          <a href="president.html">President's Message</a>
+          <a href="principal.html">Principal's Message</a>
+          <a href="director.html">Director's Message</a>
+        </div>
+    </div> 
+    <a href="admission.html">Admission</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="courses.html">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="slideshow">
+    <img id="nature" class="w3-container w3-center w3-animate-opacity" src="slide1.png">
+    <img id="nature" class="w3-container w3-center w3-animate-opacity" src="slide2.png">
+    <img id="nature" class="w3-container w3-center w3-animate-opacity" src="slide3.png">
+    <img id="nature" class="w3-container w3-center w3-animate-opacity" src="slide4.png">
+    <img id="nature" class="w3-container w3-center w3-animate-opacity" src="slide5.png">
+    <img id="nature" class="w3-container w3-center w3-animate-opacity" src="slide6.png">
+
+    <!-- We Change Pictures By Using This script.. -->
+    <script>
+    w3.slideshow("#nature", 5000);
+    </script>   
+</div>
+
+<div class="content">
+    <div class="welcome">
+        <h1>WELCOME TO INDIRA GANDHI JUNIOR COLLEGE OF ARTS, SCIENCE AND COMMERCE</h1>
+        <p>44 years of dedicated service to the Nation with firm commitment for holistic development of Student Community.</p>
+    </div>
+
+    <div class="vismismot">
+        <div class="card">
+            <i class="fa fa-graduation-cap" id="circle"></i>
+            <h3>Vision</h3>
+            <p>IGJS is committed to propagate education to the widest range of area with special preference to underprivileged and with special stress on Quality Education.</p>
+        </div>
+        <div class="card">
+            <i class="fa fa-user" id="circle"></i>
+            <h3>Mission</h3>
+            <p>IGJS endeavors to be a trend setting Quality Education provider, moving with time and technology, with special stress on World Class Education, offering access to all sections of society and to all levels.</p>
+        </div>
+        <div class="card">
+            <i class="fa fa-book" id="circle"></i>
+            <h3>Motto</h3>
+            <p>“Redefining Education for tomorrow’s world”</p>
+        </div>
+    </div>
+
+    <div class="streams">
+        <h1 style="font-size:50px; text-align: center; color: white;">Our Streams</h1>
+        <div class="row">
+            <div class="streamcard">
+                <img src="science stream.png" alt="" height="270px" width="320px" style="margin-bottom: 0 !important;">
+                <div class="text">
+                    <h5 style="font-weight: 700; font-size: 20px;">SCIENCE</h5>
+                    <p>The courses lead to the Higher secondary Certificate Examination in the respective streams.</p>
+                </div>
+            </div>
+            <div class="streamcard">
+                <img src="commerce stream.png" alt="" height="270px" width="320px" style="margin-bottom: 0 !important; padding-bottom: 0 !important; border-bottom: 0;">
+                <div class="text">
+                    <h5 style="font-weight: 700; font-size: 20px;">COMMERCE</h5>
+                    <p>The courses lead to the Higher secondary Certificate Examination in the respective streams.</p>
+                </div>
+            </div>
+
+            <div class="streamcard">
+                <img src="arts stream.png" alt="" height="270px" width="320px" style="margin-bottom: 0 !important; padding-bottom: 0 !important; border-bottom: 0;">
+                <div class="text">
+                    <h5 style="font-weight: 700; font-size: 20px;">ARTS</h5>
+                    <p>The courses lead to the Higher secondary Certificate Examination in the respective streams.</p>
+                </div>
+            </div>
+        </div>
+        <a href="courses.html"><font>View All Courses</font></a>
+    </div>
+
+    <div class="facilities">
+        <h1>facilities</h1>
+        <div class="row">
+            <div class="fcard">
+                <img src="class.png">
+                <h2>Classrooms</h2>
+            </div>
+            <div class="fcard">
+                <img src="book.png">
+                <h2>Library</h2>
+            </div>
+            <div class="fcard">
+                <img src="tea.png">
+                <h2>Canteen</h2>
+            </div>
+            <div class="fcard">
+                <img src="wifi.png">
+                <h2>Computer-center and Wifi</h2>
+            </div>
+            <div class="fcard">
+                <img src="hostel.png">
+                <h2>hostel</h2>
+            </div>
+            <div class="fcard">
+                <img src="bus.png" alt="">
+                <h2>Transport</h2>
+            </div>
+        </div>
+        <a href="facilities.html">View Details</a>
+    </div>
+
+    <div class="important">
+        <h1>Important Links:</h1>  
+        <div class="row">
+            <div class="icards">
+                <img src="date1.png" alt="" style="float: left; margin-right:0; padding-right:0;">
+                <a href="admission.html">
+                    <h3>Admissions Form 2020-2021</h3>
+                </a>
+                <p>Admission open for First / Second years Higher Secondary Certificate Course  </p>
+                <code>24x7 Hrs <br> Online Application</code>
+            </div>
+            <div class="icards">
+                <img src="date2.png" height="170px" alt="" style="float: left; margin-right:0; padding-right:0;">
+                <a href="https://nesjrcollege.org/img/Prospectus.pdf">
+                    <h3>College Prospectus</h3>
+                </a>
+            </div>
+            <br>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <code style="text-align: center !important;">&bull; &bull; &bull; &copy; 2021 IGJC all rights reserved. &bull; &bull; &bull;</code><br>
+    <a href="mailto:bhaveshgudlani716@gmail.com" style="margin-left: 150px;"><i class="fa fa-envelope"></i></a>
+    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp"></i></a>
+</div>
+</body>
+</html>

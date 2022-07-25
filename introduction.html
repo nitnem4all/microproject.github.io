@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>About Us | Indira Gandhi Jr College</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .header{
+            background-color: #002147;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: whitesmoke;
+            height: 100px;
+            width: 100%;
+        }
+        .header h1{
+            font-weight: 400;
+            font-size: 45px;
+            margin: 0;
+            padding-top: 20px;
+        }
+        .header #logo{
+            float: left;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            margin-right: 70px;
+        }
+        .navbar{
+          overflow: hidden;
+          background-color:rgb(245, 242, 230);
+          display: flex;
+          justify-content: center;
+        }
+
+        .navbar a {
+          float: left;
+          font-size: 22px;
+          font-weight: 500;
+          color: darkblue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .navbar a:not(.active):hover{
+            background-color:powderblue ;
+        }
+        #active{
+            background-color: lightskyblue;
+            color:darkblue   !important;
+        }
+        .activelink{
+            background-color: powderblue !important;
+        }
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropbtn {
+          font-size: 22px;  
+          font-weight: 500;
+          border: none;
+          outline: none;
+          color: darkblue;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:not(.activelink):hover {
+          background-color: #ddd !important;
+          border: none !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .footer{
+            background-color: #002147;
+            color: whitesmoke;
+            padding-left: 300px;
+            height:max-content;
+            font-size: 25px;
+        }
+        .footer i{
+            color: white;
+            border: 2px solid #2b5788;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            padding-top: 9px;
+            margin-bottom: 16px;
+        }
+        .footer i:hover{
+            background-color:goldenrod;
+            color: #002147;
+            border: 2px solid goldenrod;
+        }
+        marquee{
+            background-color: #002147;
+            color:wheat;
+            padding: 5px;
+            margin:0 100px;
+        }
+        .scroll{
+            background-color: #002147;
+        }
+        .content{
+            padding:70px;
+            padding-right:0;
+        }
+        .content img{
+            float: right;
+            border:5px double darkblue; 
+            border-radius: 20px; 
+            margin: 50px;
+            margin-top: 140px;
+            margin-right: 20px;
+        }
+        .content p{
+            margin-right: 650px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .prizes{
+            background-color: #eeeeee;
+            padding: 70px;
+            padding-top: 50px;
+        }
+        .prizes img{
+            height:190px;
+            width:220px;
+            float:left;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+        .flip-card {
+          background-color: transparent;
+          width: 220px;
+          height: 190px;
+          perspective: 1000px;
+          margin-right: 50px;
+          margin-top: 50px;
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back {
+          background-color: #2980b9;
+          color: white;
+          text-align: center;
+          transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="logo.png" alt="" height="100px" width="120px" id="logo">
+    <h1>Indira Gandhi College Of Arts,Commerce & Science</h1>
+</div>
+
+<div class="scroll">
+  <marquee>
+  Indira Gandhi Junior College of Arts, Commerce and Science welcomes all Students and Parents for 2021! A new entity from the IGJC Education Society, our infrastructure, teaching staff, facilities and extra-curricular activities are all among the best in Solapur city.
+  We are born out of the noble visions of its promoters for creating a new generation with high degree of basic values. .
+  </marquee>
+</div>
+   
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown" id="active">
+        <button class="dropbtn">About Us 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="introduction.html" class="activelink">Intoduction</a>
+          <a href="president.html">President's Message</a>
+          <a href="principal.html">Principal's Message</a>
+          <a href="director.html">Director's Message</a>
+        </div>
+    </div> 
+    <a href="admission.html">Admission</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="courses.html">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="content">
+    <img src="intro.png" alt="" height="385px" width="599px">
+    <h1>Who We Are</h1>
+    <p>Indira Gandhi Junior College is born out of the noble visions of its promoters for creating a new generation with high degree of basic values. The aim of the college is to impart academic excellence and to inculcate character and moral values in the students to become all-round achievers and leaders for tomorrow’s world by attaining world-career. It readily identifies itself with progressive educational movements, encourages in constructive programmes and participates in gainful purposes – all of which contribute to the cause of quality education at large. Adult education, rural welfare work, anti-drug drives, blood donation, welfare activities for physically handicapped, cancer detection camps etc. are some of the activities which our IGJS is dedicated to.</p>
+    <p>Today, IGJS Institutions impart quality education with immaculate discipline to above 28,500 boys and girls from pre-school to post graduation levels, including professional educations of different values.</p>
+    
+    <h1>What We Do</h1>
+    <p>Indira Gandhi Education Society, has however, not rested on its oars. It has dedicated and rededicated itself to usher in a new era of progress and achievement. In the post jubilee years the society proposed to expand, innovate and diversify in order to face the emerging challenges of the world and tasks in the educational realm. It has been following the great thrust on Information Technology, developing the students more on I.T. base and encouraging more and more vocational / professional education so as to be able to compete with the world standard. Every soul in our institution is inspired and equipped to impart and imbibe education, utilizing the latest of technology. Hence the college has introduced Computer Aided Teaching at class room level to make the teaching process more interesting, effective and satisfying and introduced vocational courses in the college and number of profession oriented courses under its management’s fold.</p>
+</div>
+
+<div class="prizes">
+    <h1>Our Glories::</h1>
+    <div class="row">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="prize1.png">
+              </div>
+              <div class="flip-card-back">
+                <h2 style="padding-top:25%">YEAR : 1980</h2>
+              </div>
+            </div>
+        </div> 
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="prize2.png">
+              </div>
+              <div class="flip-card-back">
+                <h2 style="padding-top:25%">YEAR : 1993</h2>
+              </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="prize3.png">
+              </div>
+              <div class="flip-card-back">
+                <h2 style="padding-top:25%">YEAR : 2004</h2>
+              </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="prize4.png">
+              </div>
+              <div class="flip-card-back">
+                <h2 style="padding-top:25%">YEAR : 2017</h2>
+              </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="footer">
+    <code style="text-align: center !important;">&bull; &bull; &bull; &copy; 2021 IGJC all rights reserved. &bull; &bull; &bull;</code><br>
+    <a href="mailto:bhaveshgudlani716@gmail.com" style="margin-left: 150px;"><i class="fa fa-envelope"></i></a>
+    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp"></i></a>
+</div>
+</body>
+</html>

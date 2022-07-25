@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Contact | Indira Gandhi Jr College</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            background-color: #ddd;
+        }
+        .header{
+            background-color: #002147;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: whitesmoke;
+            height: 100px;
+            width: 100%;
+        }
+        .header h1{
+            font-weight: 400;
+            font-size: 45px;
+            margin: 0;
+            padding-top: 20px;
+        }
+        .header #logo{
+            float: left;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            margin-right: 70px;
+        }.navbar{
+          overflow: hidden;
+          background-color:rgb(245, 242, 230);
+          display: flex;
+          justify-content: center;
+        }
+
+        .navbar a {
+          float: left;
+          font-size: 22px;
+          font-weight: 500;
+          color: darkblue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .navbar a:not(.active):hover{
+            background-color:powderblue ;
+        }
+        .active{
+            background-color: lightskyblue;
+            color:darkblue   !important;
+        }
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropbtn {
+          font-size: 22px;  
+          font-weight: 500;
+          border: none;
+          outline: none;
+          color: darkblue;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #ddd !important;
+          border: none !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .footer{
+            background-color: #002147;
+            color: whitesmoke;
+            padding-left: 300px;
+            height:max-content;
+            font-size: 25px;
+        }
+        .footer i{
+            color: white;
+            border: 2px solid #2b5788;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            padding-top: 9px;
+            margin-bottom: 16px;
+        }
+        .footer i:hover{
+            background-color:goldenrod;
+            color: #002147;
+            border: 2px solid goldenrod;
+        }
+        marquee{
+            background-color: #002147;
+            color:wheat;
+            padding: 5px;
+            margin:0 100px;
+        }
+        .scroll{
+            background-color: #002147;
+        }
+        .content{
+          margin: 50px;
+          border-radius: 7px;
+          background-color: white;
+          padding: 20px;
+          line-height: 1.6;
+          box-shadow: 10px 10px 40px 0px rgb(211 211 211);
+        }
+        .content h3{
+          color: #002147;
+          margin-top: 7px;
+          font-size: 30px;
+          border-bottom: 5px double gold;
+        }
+        .row{
+          display: flex;
+          flex-direction: row;
+        }
+        .contact-details{
+          margin: 20px;
+          width: 300px;
+          min-width: 300px;
+          float: left;
+        }
+        .contact-details a:hover{
+          color: gold;
+        }
+        .contact-details a{
+          text-decoration: none;
+          font-size: 20px;
+          line-height: 1.6;
+          color:rgb(2, 2, 167);
+        }
+        .contact-details input{
+          border: none;
+          font-size: 20px;
+          outline: none;
+          width: 150px;
+        }
+        .contact-details button{
+          border: none;
+          padding: 7px;
+          border-radius: 16px;
+          background-color: transparent;
+        }
+        .contact-details button:hover{
+          background-color: #eee;
+          padding: 7px;
+        }
+        .contact-details h2::after{
+          content: "\002e3b";
+          color: gold;
+        }
+        .contact-details code::before{
+          content: "\1f553";
+        }
+        .applynow{
+          padding:0 30px;
+          margin: 20px;
+          margin-left: 40px;
+          float: right;
+          min-width: 700px;
+        }
+        .applynow h3{
+          text-align: center;
+        }
+        form label{
+          width: 100%;
+          font-size: 25px;
+          font-weight: bold;
+        }
+        form input{
+          border-radius: 20px;
+          border: 2px solid rgb(192, 192, 192);
+          width: 35%;
+          padding: 16px;
+          outline: none;
+        }
+        form input#lname{
+          border-radius: 20px;
+          border: 2px solid rgb(192, 192, 192);
+          width: 35%;
+          margin-top: 10px;
+          padding: 16px;
+          outline: none;
+        }
+        form input#checkbox{
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+        .applynow form button{
+          width: 160px;
+          cursor: pointer;
+          padding: 11px;
+          background-color: #002147;
+          border: 3px solid lightskyblue;
+          border-radius: 7px;
+          color:white;
+          font-size: 20px;
+          text-align: center;
+          margin-top: 20px;
+          font-weight: 900;
+          margin-right: 30px;
+          text-transform: uppercase;
+        }
+        .applynow form button:hover{
+          background-color: gold;
+          color: #002147;
+          border: 3px solid gold;
+        }
+        .applynow button{
+          width: 160px;
+          cursor: pointer;
+          padding: 11px;
+          background-color: gold;
+          border: 3px solid gold;
+          border-radius: 7px;
+          color:#002147;
+          font-size: 20px;
+          text-align: center;
+          margin-top: 20px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+        .applynow button:hover{
+          background-color: #002147;
+          color: white;
+          border: 3px solid lightskyblue;
+        }
+        #status{
+          border-radius: 20px;
+          margin-top: 30px;
+          width: 100%;
+          font-weight: 100;
+          text-align: center;
+          font-size: 10px;
+          font-family: cursive;
+          line-height: 1.6;
+        }
+        #status.success{
+          font-size: 20px;
+          background-color: greenyellow;
+          color:white;
+          animation: status 7s ease-in-out forwards;
+        }
+        #status.error{
+          font-size: 20px;
+          background-color: red;
+          color:white;
+          animation: status 7s ease-in-out forwards;
+        }
+        @keyframes status {
+          0%  {opacity: 1; pointer-events: all;}
+          90% {opacity: 1; pointer-events: all;}
+          100%{opacity: 0; pointer-events: none;}
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="logo.png" alt="" height="100px" width="120px" id="logo">
+    <h1>Indira Gandhi College Of Arts,Commerce & Science</h1>
+</div>
+
+<div class="scroll">
+    <marquee>
+    Indira Gandhi Junior College of Arts, Commerce and Science welcomes all Students and Parents for 2021! A new entity from the IGJC Education Society, our infrastructure, teaching staff, facilities and extra-curricular activities are all among the best in Solapur city.
+    We are born out of the noble visions of its promoters for creating a new generation with high degree of basic values. .
+    </marquee>
+</div>
+   
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">About Us 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="introduction.html">Intoduction</a>
+          <a href="president.html">President's Message</a>
+          <a href="principal.html">Principal's Message</a>
+          <a href="director.html">Director's Message</a>
+        </div>
+    </div> 
+    <a href="admission.html">Admission</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="courses.html">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+</div>
+
+<div class="content">
+  <div class="row">
+    <div class="contact-details">
+      <h3>CONTACT DETAILS</h3>
+        <h2>Address:<br></h2>
+      <pre>SH185, Bhave Galli,
+Dharangaon, 
+Maharashtra 425105</pre>
+      <h2>By Email:<br></h2>
+      <i class="fa fa-envelope"><a href="mailto:bhaveshgudlani716@gmail.com?subject=Can I Have Your Attention Please?"> &nbsp;mail@igjc.edu</a></i><br>
+      <i class="fa fa-envelope"><a href="mailto:bhaveshgudlani716@gmail.com?subject=Can I Have Your Attention Please?"> &nbsp;info@igjc.edu</a></i>
+      <i class="fa fa-envelope"><a href="mailto:bhaveshgudlani716@gmail.com?subject=Can I Have Your Attention Please?"> &nbsp;contact@igjc.edu</a></i>
+      <h2>By Phone:<br></h2>
+      <i class="fa fa-phone"></i>
+      <input type="text" value="+91 8767609939" id="myInput" readonly>
+      <button onclick="myFunction()" style="cursor:pointer"><img src="https://www.gstatic.com/images/icons/material/system_gm/2x/content_copy_gm_grey_18dp.png" height="25px" width="25px"></button>
+      <h2>Office Timings:<br></h2>
+      <code>8.00 morning to 4.00 p.m.</code>
+      <script>
+      function myFunction() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        document.execCommand("copy");
+        alert("The Phone Number Is Copied");
+      }
+      </script>
+    </div>
+    <div class="applynow">
+      <h3 id="top">Apply Now</h3>
+      <form action="https://formspree.io/f/myylwvov" id="my-form" method="POST">
+        <label for="name">Name <font style="color: red;">*</font></label><br>
+        <input type="text" id="fname" name="fname" placeholder="First" required>
+        <input type="text" id="mname" name="mname" placeholder="Middle" required>
+        <input type="text" id="lname" name="lname" placeholder="Last" required> <br><br>
+        <label for="Phone">Phone Number <font style="color: red;">*</font></label><br>
+        <input type="text" id="Phone" name="Phone" required> <br><br>
+        <label for="Email">Email <font style="color: red;">*</font></label><br>
+        <input type="email" id="Email" name="Email" required> <br><br>
+        <label for="admission">Want Admission In? <font style="color: red;">*</font></label><br>
+        <input type="radio" style="width: auto;" id="admission" name="admission" value="Arts">
+        <label for="admission" style="font-weight: 100;">arts</label> <br>
+        <input type="radio" style="width: auto;" id="admission" name="admission" value="Commerce">
+        <label for="admission" style="font-weight: 100;">commerce</label> <br>
+        <input type="radio" style="width: auto;" id="admission" name="admission" value="Science">
+        <label for="admission" style="font-weight: 100;">science</label> <br><br> 
+        <input type="checkbox" name="chackbox" id="checkbox" value="accepted" required>
+        <label for="checkbox" style="font-weight: 500; font-family: monospace; text-transform: uppercase;">I Accept That All The Information Given By Me In The Form Above Are True</label><br> 
+        <button type="submit" style="float: left;">Submit</button>
+      </form>
+      <a href="#top"><button onclick="reload()">Reset</button></a>
+      <script>
+        var form = document.getElementById("my-form");
+
+        function reload(){
+            form.reset();
+        }
+      </script>
+      <div id="status"></div>
+    </div>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119189.76790184485!2d75.20375485820311!3d21.00545080000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd93cc7d401e40f%3A0x29cf7356d1b42f2f!2sIndira%20Gandhi%20College!5e0!3m2!1sen!2sin!4v1622972943041!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<div class="footer">
+    <code style="text-align: center !important;">&bull; &bull; &bull; &copy; 2021 IGJC all rights reserved. &bull; &bull; &bull;</code><br>
+    <a href="mailto:bhaveshgudlani716@gmail.com" style="margin-left: 150px;"><i class="fa fa-envelope"></i></a>
+    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp"></i></a>
+</div>
+<script src="contact.js"></script>
+</body>
+</html>

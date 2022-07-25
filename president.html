@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>About Us | Indira Gandhi Jr College</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .header{
+            background-color: #002147;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: whitesmoke;
+            height: 100px;
+            width: 100%;
+        }
+        .header h1{
+            font-weight: 400;
+            font-size: 45px;
+            margin: 0;
+            padding-top: 20px;
+        }
+        .header #logo{
+            float: left;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            margin-right: 70px;
+        }.navbar{
+          overflow: hidden;
+          background-color:rgb(245, 242, 230);
+          display: flex;
+          justify-content: center;
+        }
+
+        .navbar a {
+          float: left;
+          font-size: 22px;
+          font-weight: 500;
+          color: darkblue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .navbar a:not(.active):hover{
+            background-color:powderblue;
+        }
+        #active{
+            background-color: lightskyblue;
+            color:darkblue   !important;
+        }
+        .activelink{
+            background-color: powderblue !important;
+        }
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropbtn {
+          font-size: 22px;  
+          font-weight: 500;
+          border: none;
+          outline: none;
+          color: darkblue;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:not(.activelink):hover {
+          background-color: #ddd !important;
+          border: none !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .footer{
+            background-color: #002147;
+            color: whitesmoke;
+            padding-left: 300px;
+            height:max-content;
+            font-size: 25px;
+        }
+        .footer i{
+            color: white;
+            border: 2px solid #2b5788;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            padding-top: 9px;
+            margin-bottom: 16px;
+        }
+        .footer i:hover{
+            background-color:goldenrod;
+            color: #002147;
+            border: 2px solid goldenrod;
+        }
+        marquee{
+            background-color: #002147;
+            color:wheat;
+            padding: 5px;
+            margin:0 100px;
+        }
+        .scroll{
+            background-color: #002147;
+        }
+        .content{
+            padding: 70px;
+            display: flex;
+            flex-direction: row;
+        }
+        .content p{
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .col img{
+            float: left;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        .col{ 
+            margin: 20px;
+        }
+        .col h1{
+            border-bottom:5px double gold;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="logo.png" alt="" height="100px" width="120px" id="logo">
+    <h1>Indira Gandhi College Of Arts,Commerce & Science</h1>
+</div>
+
+<div class="scroll">
+    <marquee>
+    Indira Gandhi Junior College of Arts, Commerce and Science welcomes all Students and Parents for 2021! A new entity from the IGJC Education Society, our infrastructure, teaching staff, facilities and extra-curricular activities are all among the best in Solapur city.
+    We are born out of the noble visions of its promoters for creating a new generation with high degree of basic values. .
+    </marquee>
+</div>
+   
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown" id="active">
+        <button class="dropbtn">About Us 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="introduction.html">Intoduction</a>
+          <a href="president.html" class="activelink">President's Message</a>
+          <a href="principal.html">Principal's Message</a>
+          <a href="director.html">Director's Message</a>
+        </div>
+    </div> 
+    <a href="admission.html">Admission</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="courses.html">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="content">
+    <div class="col">
+        <img src="president.png" alt=""  height="370px" width="400px">
+        <h2 style="text-align: center; margin-top: 30px; padding-top: 30px;">Dr.Anupaglam</h2>
+        <p style="font-family: cursive; line-height:0; text-align:center; margin-top: 0; padding-top: 0;">President & Co-Founder</p><br>
+        <p style="font-family: cursive; font-weight:bold; line-height:0; text-align:center; margin-top: 0; padding-top: 0;">IGJS-Group Of Institutions</p>
+    </div>
+    <div class="col">
+        <h1>President's Message</h1>
+        <p>My Dear Students, <br>The governance policies and practices of IGES are drawn from the rich experience of managing more than 65 institutions in the education sector for more than five decades. The agility of operations, nimble decision making, quick follow up and effective and efficient event management are drawn from this expertise and professional ease. We spare no pains to facilitate students' holistic development. We believe in the philosophy that no child should be left behind. This philosophy has led to emotional bonding and deep loyalty from the community. Every minute we spend in making students' experience richer is time well spent. We ensure that students are equipped with life skills which make them informed decision makers and future ready citizens.</p>
+        <p>The IGES group not only offers programmes from Kg. to the Doctorate level, but also presents unique subjects such as Space Science and World Peace that open up young minds to the frontiers of technology. Education is getting redefined and 21st century skills have to be instilled in students through innovative methodology and latest curricula, especially in this digital world. The year 2019-20 is set to meet the Annual Theme - “Upgradation 2.0”.</p>
+        <p>We are working on a war footing to ensure that we are ready to face the future with confidence and dignity. Our students must be better equipped with the stamina to run longer and faster than ever before. No efforts will be spared on the part of our institutions and our teachers to support our students in this regard. Along with my staff, students and alumni I invite my other stakeholders to be partners in this noble mission of Education for the future.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <code style="text-align: center !important;">&bull; &bull; &bull; &copy; 2021 IGJC all rights reserved. &bull; &bull; &bull;</code><br>
+    <a href="mailto:bhaveshgudlani716@gmail.com" style="margin-left: 150px;"><i class="fa fa-envelope"></i></a>
+    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp"></i></a>
+</div>
+</body>
+</html>

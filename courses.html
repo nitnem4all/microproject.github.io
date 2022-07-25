@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Courser Offered | Indira Gandhi Jr College</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .header{
+            background-color:#002147;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: whitesmoke;
+            height: 100px;
+            width: 100%;
+        }
+        .header h1{
+            font-weight: 400;
+            font-size: 45px;
+            margin: 0;
+            padding-top: 20px;
+        }
+        .header #logo{
+            float: left;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            margin-right: 70px;
+        }.navbar{
+          overflow: hidden;
+          background-color:rgb(245, 242, 230);
+          display: flex;
+          justify-content: center;
+        }
+
+        .navbar a {
+          float: left;
+          font-size: 22px;
+          font-weight: 500;
+          color: darkblue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .navbar a:not(.active):hover{
+            background-color:powderblue ;
+        }
+        .active{
+            background-color: lightskyblue;
+            color:darkblue   !important;
+        }
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropbtn {
+          font-size: 22px;  
+          font-weight: 500;
+          border: none;
+          outline: none;
+          color: darkblue;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #ddd !important;
+          border: none !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .footer{
+            background-color: #002147;
+            color: whitesmoke;
+            padding-left: 300px;
+            height:max-content;
+            font-size: 25px;
+        }
+        .footer i{
+            color: white;
+            border: 2px solid #2b5788;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            padding-top: 9px;
+            margin-bottom: 16px;
+        }
+        .footer i:hover{
+            background-color:goldenrod;
+            color: #002147;
+            border: 2px solid goldenrod;
+        }
+        marquee{
+            background-color: #002147;
+            color:wheat;
+            padding: 5px;
+            margin:0 100px;
+        }
+        .scroll{
+            background-color: #002147;
+        }
+        .content{
+            padding:50px;
+            background-color: #ddd;
+        }
+        .main{
+            border-radius: 7px;
+            background-color: white;
+            padding: 20px;
+            width: 828px;
+            min-width: 828px;
+            line-height: 1.6;
+            box-shadow: 10px 10px 40px 0px rgb(211 211 211);
+            margin-right: 20px;
+        }
+        .main h3{
+          color: #002147;
+          margin-top: 7px;
+          font-size: 30px;
+          border-bottom: 5px double gold;
+        }
+        form{
+            border-radius: 7px;
+            height: max-content;
+            background-color: white;
+            padding: 20px;
+            width: 240px;
+            line-height: 1.6;
+            box-shadow: 10px 10px 40px 0px rgb(211 211 211);
+        }
+        form input{
+          padding: 10px;
+          margin-bottom: 10px;
+          max-width: 230px;
+          border:1px solid rgba(184, 181, 181, 0.822);
+          width: 90%;
+        }
+        form textarea{
+          padding: 10px;
+          margin-bottom: 10px;
+          max-width: 216px;
+          border:1px solid rgba(184, 181, 181, 0.822);
+          width: 100%;
+        }
+        form input:focus , textarea:focus{  
+          outline: none !important; 
+          border: 2px double black;
+        }
+        form h3{
+          color: #002147;
+          line-height: 1.2 !important;
+        }
+        form button{
+          background-color: whitesmoke;
+          border: 0;
+          border-radius: 5px;
+          color: #002147;
+          width: 100%;
+          padding: 13px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        form button:hover{
+          background-color: #002147;
+          color: gold;
+        }
+        #status{
+          border-radius: 20px;
+          margin-top: 30px;
+          width: 100%;
+          font-weight: 100;
+          text-align: center;
+          font-size: 10px;
+          font-family: cursive;
+          line-height: 1.6;
+        }
+        #status.success{
+          font-size: 20px;
+          background-color: greenyellow;
+          color:white;
+          animation: status 7s ease-in-out forwards;
+        }
+        #status.error{
+          font-size: 20px;
+          background-color: red;
+          color:white;
+          animation: status 7s ease-in-out forwards;
+        }
+        @keyframes status {
+          0%  {opacity: 1; pointer-events: all;}
+          90% {opacity: 1; pointer-events: all;}
+          100%{opacity: 0; pointer-events: none;}
+        }
+        .col{
+          display: flex;
+          flex-direction: column;
+        }
+        .row{
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 40px;
+        }
+        td{
+          padding:10px 30px;
+        }
+        .main .span{
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 40px;
+        }
+        .main a{
+          text-decoration: none;
+          font-size: 16px;
+          color: white;
+          font-weight: 700;
+          padding: 16px;
+          background-color: #002147;
+          border-radius: 20px;
+        }
+        .main a:hover{
+          background-color: gold;
+          color: #002147;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="logo.png" alt="" height="100px" width="120px" id="logo">
+    <h1>Indira Gandhi College Of Arts,Commerce & Science</h1>
+</div>
+
+<div class="scroll">
+  <marquee>
+  Indira Gandhi Junior College of Arts, Commerce and Science welcomes all Students and Parents for 2021! A new entity from the IGJC Education Society, our infrastructure, teaching staff, facilities and extra-curricular activities are all among the best in Solapur city.
+  We are born out of the noble visions of its promoters for creating a new generation with high degree of basic values. .
+  </marquee>
+</div>
+   
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">About Us 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="introduction.html">Intoduction</a>
+          <a href="president.html">President's Message</a>
+          <a href="principal.html">Principal's Message</a>
+          <a href="director.html">Director's Message</a>
+        </div>
+    </div> 
+    <a href="admission.html">Admission</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="courses.html" class="active">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="content">
+  <div class="row">
+    <div class="main">
+      <img src="https://collegexperience.net/wp-content/uploads/2016/11/schedule-college-classes.jpg" alt="" width="100%">
+      <h3>Three Stream Composite Junior College</h3>
+      <p>The Indira Gandhi Junior College imparts education upto Higher Secondary (Std. XII) in all three branches of Arts, Science and Commerce, in English medium.</p>
+      <strong>COURSE OF STUDY (HIGHER SECONDARY BOARD)</strong>
+      <p>The Institution sends up students for the H.S.C. Examination, conducted by the Maharashtra State Board of Secondary and Higher Secondary Education, Mumbai. The Examination for the 1st year Junior College is conducted by the college itself.</p>
+      <br><hr style="border: 1px dashed black;"><br>
+      <!-- ARTS:: -->
+      <h3>Arts</h3>
+      <p>Though the Arts stream is not so common among students; it holds many exciting career opportunities like journalism, literature, social works, teaching, etc.</p>
+      <p>In the arts stream, you have to select six subjects including one compulsory language and one optional language. Arts offers you a huge list of optional remaining four subjects which include sociology, history, literature, political science, philosophy, economics, geography, etc.</p>
+      <table>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> English  
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> History</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Environmental Studies</td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Physical Education</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Sociology</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Hindi</td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Economics</td></td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Political Science</td>
+        </tr>
+      </table><br>
+          <div class="span"><a href="contact.html">Apply Now</a></div>
+      <!-- COMMERCE:: -->
+      <hr style="border: 1px dashed black;"><br>
+      <h3>Commerce</h3>
+      <p>Commerce stream leads towards some of the highest paying and respected jobs like investment banking, chartered accountancy, company secretaryship, accounting, financial advisory etc.</p>
+      <p>The three major subjects taught in commerce stream are economics, accountancy and business law or business study. The subjects offered by college include business economics, accountancy, organization of commerce and management, Secretarial Practices etc. In commerce stream the student has to select six subjects including one compulsory language.</p>
+      <table>
+        <tr>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> English  
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> History</td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Environmental Studies</td>
+        </tr>
+        <tr>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Physical Education</td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Banking</td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Mathematics</td>
+        </tr>
+        <tr>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Information Technology</td></td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Office Management</td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Secretarial Practice</td>
+        </tr>
+        <tr>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Book-Keeping & Accountancy</td></td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Organisation of Commerce</td>
+          <td style=" padding-left: 15px; padding-right: 15px;"><i class="fa fa-check-circle" style="font-size: 20px; color: gold;"></i> Economics</td>
+        </tr>
+      </table><br>
+          <div class="span"><a href="contact.html">Apply Now</a></div>
+      <!-- SCIENCE:: -->
+      <hr style="border: 1px dashed black;"><br>
+      <h3>Science</h3>
+      <p>Science basically introduces students to the ‘how’ of everything around us. It drives students to create a thirst for knowledge in themselves and drive them towards a creative mindset through innovation. </p>
+      <p>Technology drives the current world market, and when introduced to students with an early onset makes the greatest impact. Analytical and Out of the box thinking accelerates and gives the students the push they need, toward a career path that can take them to the heights they deserve to be.</p>
+      <p>We have a blend of dedicated and forward-looking Management and committed Teaching and Non Teaching Staff, and we have ensured that the college is always steered in the right direction.</p>
+      <p>The greatest strength of the college is that it is managed by academicians, who not only understand and respect the value of education and educationists but also believe that knowledge is power and the value of knowledge lies not in its accumulation but in its utilization.</p>
+      <table>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> English  
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> History</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Environmental Studies</td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Chemistry</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Biology</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Physics</td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Mathematics</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Information Technology</td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Computer Science</td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Electronics</td></td>
+          <td><i class="fa fa-check-circle" style="font-size: 25px; color: gold;"></i> Physical Education</td>
+        </tr>
+      </table> 
+      <div class="span"><a href="contact.html">Apply Now</a></div>         
+  </div>
+
+  <div class="col">
+    <form action="https://formspree.io/f/mzbyrwoq" method="POST" id="my-form">
+      <h3>Having Some Questions? <br>
+        Feel Free To Ask Us By Filling This Form..
+      </h3>
+      <div class="input">
+        <label for="name">Name <font style="color: red;">*</font></label> <br>
+        <input type="text" name="fname" id="name" placeholder="First"> <br>
+        <input type="text" name="mname" id="name" placeholder="Middle"> <br>
+        <input type="text" name="lname" id="name" placeholder="Last"> <br>
+      </div>
+      <div class="input">
+        <label for="">Email <font style="color: red;">*</font></label> <br>
+        <input type="email" name="email" id="email"> <br>
+      </div>
+      <div class="input">
+        <label for="message">Message <font style="color: red;">*</font></label> <br>
+        <textarea name="message" id="message"></textarea> <br>
+      </div>
+      <button type="submit">SUBMIT</button>
+    </form>
+    <div id="status"></div>
+    <!-- Javascript for controlling the form.. -->
+    <script src="admission.js"></script>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+    <code style="text-align: center !important;">&bull; &bull; &bull; &copy; 2021 IGJC all rights reserved. &bull; &bull; &bull;</code><br>
+    <a href="mailto:bhaveshgudlani716@gmail.com" style="margin-left: 150px;"><i class="fa fa-envelope"></i></a>
+    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp"></i></a>
+</div>
+</body>
+</html>
